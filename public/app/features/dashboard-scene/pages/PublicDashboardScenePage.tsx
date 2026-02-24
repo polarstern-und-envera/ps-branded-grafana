@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom-v5-compat';
 import { GrafanaTheme2, PageLayoutType } from '@grafana/data';
 import { selectors as e2eSelectors } from '@grafana/e2e-selectors';
 import { SceneComponentProps, UrlSyncContextProvider } from '@grafana/scenes';
-import { Alert, Box, Icon, Stack, useStyles2 } from '@grafana/ui';
+import { Alert, Box, Stack, useStyles2 } from '@grafana/ui';
 import { Page } from 'app/core/components/Page/Page';
 import PageLoader from 'app/core/components/PageLoader/PageLoader';
 import { GrafanaRouteComponentProps } from 'app/core/navigation/types';
@@ -18,6 +18,7 @@ import {
 } from 'app/features/dashboard/containers/types';
 import { AppNotificationSeverity } from 'app/types/appNotifications';
 import { DashboardRoutes } from 'app/types/dashboard';
+import polarsternIconSvg from 'img/polarstern_logo.svg';
 
 import { DashboardScene } from '../scene/DashboardScene';
 
@@ -94,10 +95,10 @@ function PublicDashboardSceneRenderer({ model }: SceneComponentProps<DashboardSc
         <Stack alignItems="center">
           {!conf.headerLogoHide && (
             <div className={styles.iconTitle}>
-              <Icon name="grafana" size="lg" aria-hidden />
+              <img src={polarsternIconSvg} alt="Polarstern" style={{ height: '3rem' }} />
             </div>
           )}
-          <span className={styles.title}>{title}</span>
+          <span className={styles.title}>Polarstern - {title}</span>
         </Stack>
         {!hideTimeControls && (
           <Stack>

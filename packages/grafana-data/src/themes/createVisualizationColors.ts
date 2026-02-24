@@ -277,6 +277,11 @@ function getClassicPalette() {
   // Todo replace these with named colors (as many as possible)
 
   return [
+    // ps chart colors:
+    '#b4cd91',
+    '#F0D75A',
+    '#8C8378',
+    // grafana chart colors:
     'green',
     'semi-dark-yellow',
     'blue',

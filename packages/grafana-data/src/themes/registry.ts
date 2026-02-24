@@ -1,18 +1,7 @@
 import { Registry, RegistryItem } from '../utils/Registry';
 
 import { createTheme, NewThemeOptionsSchema } from './createTheme';
-import aubergine from './themeDefinitions/aubergine.json';
-import debug from './themeDefinitions/debug.json';
-import desertbloom from './themeDefinitions/desertbloom.json';
-import gildedgrove from './themeDefinitions/gildedgrove.json';
-import gloom from './themeDefinitions/gloom.json';
-import mars from './themeDefinitions/mars.json';
-import matrix from './themeDefinitions/matrix.json';
-import sapphiredusk from './themeDefinitions/sapphiredusk.json';
-import synthwave from './themeDefinitions/synthwave.json';
-import tron from './themeDefinitions/tron.json';
-import victorian from './themeDefinitions/victorian.json';
-import zen from './themeDefinitions/zen.json';
+import polarstern from './themeDefinitions/polarstern.json';
 import { GrafanaTheme2 } from './types';
 
 export interface ThemeRegistryItem extends RegistryItem {
@@ -21,18 +10,7 @@ export interface ThemeRegistryItem extends RegistryItem {
 }
 
 const extraThemes: { [key: string]: unknown } = {
-  aubergine,
-  debug,
-  desertbloom,
-  gildedgrove,
-  gloom,
-  mars,
-  matrix,
-  sapphiredusk,
-  synthwave,
-  tron,
-  victorian,
-  zen,
+  polarstern,
 };
 
 /**
