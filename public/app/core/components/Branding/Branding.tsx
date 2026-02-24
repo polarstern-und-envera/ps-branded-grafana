@@ -5,7 +5,7 @@ import { colorManipulator } from '@grafana/data';
 import { useTheme2 } from '@grafana/ui';
 import g8LoginDarkSvg from 'img/g8_login_dark.svg';
 import g8LoginLightSvg from 'img/g8_login_light.svg';
-import grafanaIconSvg from 'img/grafana_icon.svg';
+import polarsternIconSvg from 'img/polarstern_logo.svg';
 
 export interface BrandComponentProps {
   className?: string;
@@ -13,7 +13,7 @@ export interface BrandComponentProps {
 }
 
 export const LoginLogo: FC<BrandComponentProps & { logo?: string }> = ({ className, logo }) => {
-  return <img className={className} src={`${logo ? logo : grafanaIconSvg}`} alt="Grafana" />;
+  return <img className={className} src={`${logo ? logo : polarsternIconSvg}`} alt="Grafana" />;
 };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
@@ -46,7 +46,7 @@ const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
 };
 
 const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src={grafanaIconSvg} alt="Grafana" />;
+  return <img className={className} src={polarsternIconSvg} alt="Grafana" />;
 };
 
 const LoginBoxBackground = () => {
