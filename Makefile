@@ -369,7 +369,7 @@ test-go-integration-alertmanager: ## Run integration tests for the remote alertm
 	@echo "test remote alertmanager integration tests"
 	$(GO) clean -testcache
 	AM_URL=http://localhost:8080 AM_TENANT_ID=test \
-	$(GO) test $(GO_RACE_FLAG) -count=1 -run "^TestIntegrationRemoteAlertmanager" -covermode=atomic -timeout=5m ./pkg/services/ngalert/...
+$(GO) test $(GO_RACE_FLAG) -count=1 -run "^TestIntegrationRemoteAlertmanager" -covermode=atomic -timeout=5m ./pkg/services/ngalert/...
 
 .PHONY: test-go-integration-grafana-alertmanager
 test-go-integration-grafana-alertmanager: ## Run integration tests for the grafana alertmanager
@@ -474,7 +474,7 @@ endif
 .PHONY: build-docker-full
 build-docker-full: ## Build Docker image for development.
 	@echo "build docker container mode=($(DOCKER_JS_NODE_ENV_FLAG))"
-	tar -ch . | \
+	tar -ch --exclude='.git' . | \
 	docker buildx build - \
 	--platform $(PLATFORM) \
 	--build-arg NODE_ENV=$(DOCKER_JS_NODE_ENV_FLAG) \
@@ -491,7 +491,7 @@ build-docker-full: ## Build Docker image for development.
 .PHONY: build-docker-full-ubuntu
 build-docker-full-ubuntu: ## Build Docker image based on Ubuntu for development.
 	@echo "build docker container mode=($(DOCKER_JS_NODE_ENV_FLAG))"
-	tar -ch . | \
+	tar -ch --exclude='.git' . | \
 	docker buildx build - \
 	--platform $(PLATFORM) \
 	--build-arg NODE_ENV=$(DOCKER_JS_NODE_ENV_FLAG) \

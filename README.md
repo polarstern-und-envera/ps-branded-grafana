@@ -37,6 +37,25 @@ If you're interested in contributing to the Grafana project:
 
 > Share your contributor experience in our [feedback survey](https://gra.fan/ome) to help us improve.
 
+## Building the Docker image
+
+To build a development Docker image:
+
+```bash
+make build-docker-full
+```
+
+This builds a `grafana/grafana-oss:dev` image for `linux/amd64` by default.
+
+### Requirements
+
+- **Docker Desktop** with at least **8 GB of memory** allocated (Settings → Resources). 12 GB+ is recommended when cross-compiling (e.g. building `linux/amd64` on Apple Silicon).
+
+### Variants
+
+- **Ubuntu-based image:** `make build-docker-full-ubuntu` (produces `grafana/grafana-oss:dev-ubuntu`)
+- **Development mode** (unminified frontend): `make build-docker-full MODE=dev`
+
 ## Get involved
 
 - Follow [@grafana on X (formerly Twitter)](https://x.com/grafana/).
