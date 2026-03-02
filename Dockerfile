@@ -104,11 +104,12 @@ RUN if [[ "$BINGO" = "true" ]]; then \
   bingo get -v; \
   fi
 
-COPY embed.go Makefile build.go package.json ./
+COPY embed.go Makefile package.json ./
 COPY cue.mod cue.mod
 COPY kinds kinds
 COPY local local
 COPY packages/grafana-schema packages/grafana-schema
+COPY packages/grafana-data/src/themes/themeDefinitions packages/grafana-data/src/themes/themeDefinitions
 COPY public/app/plugins public/app/plugins
 COPY public/api-merged.json public/api-merged.json
 COPY pkg pkg

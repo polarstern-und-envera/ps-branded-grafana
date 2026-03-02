@@ -403,7 +403,7 @@ PLATFORM=linux/amd64
 .PHONY: build-docker-full
 build-docker-full: ## Build Docker image for development.
 	@echo "build docker container"
-	tar -ch . | \
+	tar -ch --exclude='.git' . | \
 	docker buildx build - \
 	--platform $(PLATFORM) \
 	--build-arg BINGO=false \
@@ -417,7 +417,7 @@ build-docker-full: ## Build Docker image for development.
 .PHONY: build-docker-full-ubuntu
 build-docker-full-ubuntu: ## Build Docker image based on Ubuntu for development.
 	@echo "build docker container"
-	tar -ch . | \
+	tar -ch --exclude='.git' . | \
 	docker buildx build - \
 	--platform $(PLATFORM) \
 	--build-arg BINGO=false \
