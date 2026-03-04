@@ -1,83 +1,74 @@
 import { NewThemeOptions } from '../createTheme';
 
-/**
- * Torkel's GrafanaCon theme
- * very WIP state
- */
-
-const whiteBase = `210, 210, 220`;
-const secondaryBase = `195, 195, 245`;
-
-//const brandMain = '#3d71d9';
-//const brandText = '#6e9fff';
-const brandMain = '#00dcb9';
-const brandText = '#f99a5c';
-const disabledText = `rgba(${whiteBase}, 0.48)`;
-
-const gloomTheme: NewThemeOptions = {
-  name: 'Gloom',
+const polarsternTheme: NewThemeOptions = {
+  name: 'Polarstern',
   colors: {
-    mode: 'dark',
+    mode: 'light',
     border: {
-      weak: `rgba(${whiteBase}, 0.12)`,
-      medium: `rgba(${whiteBase}, 0.20)`,
-      strong: `rgba(${whiteBase}, 0.30)`,
+      weak: 'rgba(0, 0, 0, 0.12)',
+      medium: 'rgba(0, 0, 0, 0.20)',
+      strong: 'rgba(0, 0, 0, 0.30)',
     },
-
     text: {
-      primary: `rgb(${whiteBase})`,
-      secondary: `rgba(${whiteBase}, 0.65)`,
-      disabled: disabledText,
-      link: brandText,
-      maxContrast: '#FFF',
+      primary: '#333333',
+      secondary: '#555555',
+      disabled: 'rgba(0, 0, 0, 0.5)',
+      link: '#1A82E2',
+      maxContrast: '#000000',
     },
-
     primary: {
-      main: brandMain,
-      text: brandText,
-      border: brandMain,
+      main: '#142828',
+      text: '#142828',
+      border: '#E55B4D',
       name: 'primary',
+      shade: '#E55B4D',
+      transparent: '#FF6F6126',
+      contrastText: '#FFFFFF',
+      borderTransparent: '#FF6F6140',
     },
-
     secondary: {
-      main: `rgba(${secondaryBase}, 0.10)`,
-      shade: `rgba(${secondaryBase}, 0.14)`,
-      transparent: `rgba(${secondaryBase}, 0.08)`,
-      text: `rgba(${secondaryBase})`,
-      contrastText: `rgb(${secondaryBase})`,
-      border: `rgba(${secondaryBase}, 0.08)`,
+      main: '#FFFFFF',
+      text: '#695f53',
+      border: '#d9cec0',
+      name: 'secondary',
+      shade: '#d9cec0',
+      transparent: '#FFFFFF26',
+      contrastText: '#4c4339',
+      borderTransparent: '#FFFFFF40',
     },
-
+    info: {
+      main: '#1A82E2',
+    },
+    success: {
+      main: '#4CAF50',
+    },
+    warning: {
+      main: '#FFC107',
+    },
     background: {
-      canvas: '#000',
-      primary: '#121118',
-      secondary: '#211e28',
-      elevated: '#211e28',
+      canvas: '#FFFFFF',
+      primary: '#FFFFFF',
+      secondary: '#f9f3e8',
+      elevated: '#FFFFFF',
     },
-
     action: {
-      hover: `rgba(${secondaryBase}, 0.07)`,
-      selected: `rgba(${secondaryBase}, 0.11)`,
-      selectedBorder: brandMain,
-      focus: `rgba(${secondaryBase}, 0.07)`,
-      hoverOpacity: 0.05,
-      disabledText: disabledText,
-      disabledBackground: `rgba(${whiteBase}, 0.04)`,
+      hover: 'rgba(168, 156, 134, 0.12)',
+      selected: 'rgba(168, 156, 134, 0.36)',
+      selectedBorder: '#FF6F61',
+      focus: 'rgba(168, 156, 134, 0.50)',
+      hoverOpacity: 0.08,
+      disabledText: 'rgba(168, 156, 134, 0.5)',
+      disabledBackground: 'rgba(168, 156, 134, 0.06)',
       disabledOpacity: 0.38,
     },
-
-    // gradients: {
-    //   brandHorizontal: 'linear-gradient(270deg, #ff934d 0%, #FEAC34 100%)',
-    //   brandVertical: 'linear-gradient(0.01deg, #ff934d 0.01%, #FEAC34 99.99%)',
-    // },
-
+    gradients: {
+      brandHorizontal: 'linear-gradient(270deg,rgba(255, 111, 97, 1) 0%, rgba(255, 167, 58, 1) 100%)',
+      brandVertical: 'linear-gradient(0deg, rgba(255, 111, 97, 1) 0%, rgba(255, 167, 58, 1) 100%)',
+    },
     contrastThreshold: 3,
     hoverFactor: 0.03,
     tonalOffset: 0.15,
   },
-  shape: {
-    borderRadius: 5,
-  },
 };
 
-export default gloomTheme;
+export default polarsternTheme;
