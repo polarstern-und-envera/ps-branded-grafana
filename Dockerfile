@@ -33,6 +33,7 @@ COPY public public
 COPY LICENSE ./
 COPY conf/defaults.ini ./conf/defaults.ini
 COPY e2e e2e
+COPY e2e-playwright e2e-playwright
 
 RUN apk add --no-cache make build-base python3
 
@@ -104,7 +105,7 @@ RUN if [[ "$BINGO" = "true" ]]; then \
   bingo get -v; \
   fi
 
-COPY embed.go Makefile package.json ./
+COPY embed.go Makefile build.go package.json ./
 COPY cue.mod cue.mod
 COPY kinds kinds
 COPY local local
