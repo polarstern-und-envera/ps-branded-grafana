@@ -4,6 +4,15 @@ Pinned to version 12.0.4!
 Do not upgrade until this bug is fixed: https://github.com/grafana/grafana/issues/110740
 Currently this image is built locally and pushed to docker hub. Credentials are stored in Keeper.
 
+# Start locally with:
+
+```bash
+# BE
+make run
+# FE
+yarn start
+```
+
 # Grafana Readme
 
 ![Grafana Logo (Light)](docs/logo-horizontal.png#gh-light-mode-only)
