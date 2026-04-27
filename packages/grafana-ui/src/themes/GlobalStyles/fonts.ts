@@ -32,29 +32,33 @@ export function getFontStyles(theme: GrafanaTheme2) {
       },
     },
     {
-      /*
-    To add new variations/version of Inter, download from https://rsms.me/inter/ and add the
-    web font files to the public/fonts/inter folder. Do not download the fonts from Google Fonts
-    or somewhere else because they don't support the features we require (like tabular numerals).
-
-    If adding additional weights, consider switching to the InterVariable variable font as combined
-    it may take less space than multiple static weights.
-    */
+      /* Helvetica LT W01 Light (weight 300) */
       '@font-face': {
-        fontFamily: 'Inter',
+        fontFamily: 'Helvetica Neue',
         fontStyle: 'normal',
-        fontWeight: 400,
+        fontWeight: 300,
         fontDisplay: 'swap',
-        src: `url('${fontRoot}inter/Inter-Regular.woff2') format('woff2')`,
+        src: `url('${fontRoot}Helvetica/37953885-0443-4c72-a693-9152a9f5a901.woff2') format('woff2'), url('${fontRoot}Helvetica/fcce277c-07e2-4c88-ad8b-a71b484e2cbe.woff') format('woff'), url('${fontRoot}Helvetica/315bbeb9-a30f-4f38-91ae-d6cfbbf89437.ttf') format('truetype')`,
       },
     },
     {
+      /* Helvetica LT W01 Roman (weight 400) */
       '@font-face': {
-        fontFamily: 'Inter',
+        fontFamily: 'Helvetica Neue',
         fontStyle: 'normal',
-        fontWeight: 500,
+        fontWeight: 400,
         fontDisplay: 'swap',
-        src: `url('${fontRoot}inter/Inter-Medium.woff2') format('woff2')`,
+        src: `url('${fontRoot}Helvetica/89294146-207c-4803-91fe-338f0d0094bd.woff2') format('woff2'), url('${fontRoot}Helvetica/57055fe4-c2d3-4287-bac2-eece43fdcbd3.woff') format('woff'), url('${fontRoot}Helvetica/2922d55c-8df4-4066-b7b0-eec2d1524330.ttf') format('truetype')`,
+      },
+    },
+    {
+      /* Helvetica LT W01 Bold (weight 700) */
+      '@font-face': {
+        fontFamily: 'Helvetica Neue',
+        fontStyle: 'normal',
+        fontWeight: 700,
+        fontDisplay: 'swap',
+        src: `url('${fontRoot}Helvetica/7ce0a2f5-eb00-46aa-919c-5b3f3667646c.woff2') format('woff2'), url('${fontRoot}Helvetica/cad22c74-45b4-4c49-9e6a-0cd3768a7bc7.woff') format('woff'), url('${fontRoot}Helvetica/8ebb9b04-d12d-488e-aa96-0bb6e6777336.ttf') format('truetype')`,
       },
     },
   ]);

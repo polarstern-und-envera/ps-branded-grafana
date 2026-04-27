@@ -18,7 +18,7 @@ import {
 } from 'app/features/dashboard/containers/types';
 import { AppNotificationSeverity } from 'app/types/appNotifications';
 import { DashboardRoutes } from 'app/types/dashboard';
-import polarsternIconSvg from 'img/polarstern_logo.svg';
+import polarsternIconSvg from 'img/polarstern_logo_full.svg';
 
 import { DashboardScene } from '../scene/DashboardScene';
 
@@ -96,10 +96,10 @@ function PublicDashboardSceneRenderer({ model }: SceneComponentProps<DashboardSc
         <Stack alignItems="center">
           {!conf.headerLogoHide && (
             <div className={styles.iconTitle}>
-              <img src={polarsternIconSvg} alt="Polarstern" style={{ height: '3rem' }} />
+              <img src={polarsternIconSvg} alt="Polarstern" style={{ height: '3rem', width: 'unset' }} />
             </div>
           )}
-          <span className={styles.title}>Polarstern - {title}</span>
+          <span className={styles.title}>{title}</span>
         </Stack>
         {!hideTimeControls && (
           <Stack>

@@ -261,9 +261,12 @@ function getClassicPalette() {
 
   return [
     // ps chart colors:
-    '#b4cd91',
+    '#B4CD91',
+    '#C8DCB4',
     '#F0D75A',
-    '#8C8378',
+    '#E6C814',
+    '#B9C8C3',
+    '#F07D69',
     // grafana chart colors:
     'green',
     'yellow',

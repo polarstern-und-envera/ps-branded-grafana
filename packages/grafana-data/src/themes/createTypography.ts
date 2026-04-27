@@ -53,7 +53,7 @@ export interface ThemeTypographyInput {
   htmlFontSize?: number;
 }
 
-const defaultFontFamily = "'Inter', 'Helvetica', 'Arial', sans-serif";
+const defaultFontFamily = "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 const defaultFontFamilyMonospace = "'Roboto Mono', monospace";
 
 export function createTypography(colors: ThemeColors, typographyInput: ThemeTypographyInput = {}): ThemeTypography {
@@ -65,7 +65,7 @@ export function createTypography(colors: ThemeColors, typographyInput: ThemeTypo
     fontWeightLight = 300,
     fontWeightRegular = 400,
     fontWeightMedium = 500,
-    fontWeightBold = 500,
+    fontWeightBold = 700,
     // Tell Grafana-UI what's the font-size on the html element.
     // 16px is the default font-size used by browsers.
     htmlFontSize = 14,
@@ -106,7 +106,7 @@ export function createTypography(colors: ThemeColors, typographyInput: ThemeTypo
 
   // All our fonts/line heights should be integer multiples of 2 to prevent issues with alignment
   const variants = {
-    h1: buildVariant(fontWeightRegular, 28, 32, -0.25),
+    h1: buildVariant(fontWeightBold, 28, 32, -0.25),
     h2: buildVariant(fontWeightRegular, 24, 28, 0),
     h3: buildVariant(fontWeightRegular, 22, 24, 0),
     h4: buildVariant(fontWeightRegular, 18, 22, 0.25),

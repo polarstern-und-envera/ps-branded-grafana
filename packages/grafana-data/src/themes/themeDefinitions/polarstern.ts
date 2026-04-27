@@ -10,9 +10,9 @@ const polarsternTheme: NewThemeOptions = {
       strong: 'rgba(0, 0, 0, 0.30)',
     },
     text: {
-      primary: '#333333',
-      secondary: '#555555',
-      disabled: 'rgba(0, 0, 0, 0.5)',
+      primary: '#142828',
+      secondary: 'rgba(20, 40, 40, 0.75)',
+      disabled: 'rgba(20, 40, 40, 0.65)',
       link: '#1A82E2',
       maxContrast: '#000000',
     },
@@ -39,11 +39,17 @@ const polarsternTheme: NewThemeOptions = {
     info: {
       main: '#1A82E2',
     },
+    error: {
+      main: '#F07D69',
+      text: '#F07D69',
+    },
     success: {
-      main: '#4CAF50',
+      main: '#B4CD91',
+      text: '#C8DCB4',
     },
     warning: {
-      main: '#FFC107',
+      main: '#E6C814',
+      text: '#F0D75A',
     },
     background: {
       canvas: '#FFFFFF',
@@ -52,10 +58,10 @@ const polarsternTheme: NewThemeOptions = {
       elevated: '#FFFFFF',
     },
     action: {
-      hover: 'rgba(168, 156, 134, 0.12)',
-      selected: 'rgba(168, 156, 134, 0.36)',
-      selectedBorder: '#FF6F61',
-      focus: 'rgba(168, 156, 134, 0.50)',
+      hover: 'rgba(0, 220, 185, 0.12)',
+      selected: 'rgba(0, 220, 185, 0.08)',
+      selectedBorder: '#E6C814',
+      focus: 'rgba(0, 220, 185, 0.12)',
       hoverOpacity: 0.08,
       disabledText: 'rgba(168, 156, 134, 0.5)',
       disabledBackground: 'rgba(168, 156, 134, 0.06)',
