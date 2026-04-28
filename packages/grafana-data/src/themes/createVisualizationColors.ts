@@ -262,8 +262,6 @@ function getClassicPalette() {
   return [
     // ps chart colors:
     '#B4CD91',
-    '#C8DCB4',
-    '#F0D75A',
     '#E6C814',
     '#B9C8C3',
     '#F07D69',
